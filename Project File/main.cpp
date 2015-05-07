@@ -1,19 +1,19 @@
-/*
-Title: No Bomb No Life
-IDE: Visual Studio 2013
-
-This is a source code for the project about a waterball-fighting game.
-*/
-#include"Menu.h"
-#include"controlCon.h"
-#define consoleWidth 90
-#define consoleHeight 25 
+#include"BombGame.h"
 
 int main()
 {
-		SetConsoleSize(consoleWidth, consoleHeight);	
+	BombGame game;
+	std::unique_ptr<Menu> menu(new Menu);
+
+	game.setMenu(menu);
 	
-		DisplayList();
+	int opt(0);
+
+	while (!opt)
+	{
+		opt=game.DisplayMenu();
+		opt=game.OptionDetail(opt);
+	}
 
 	return 0;
 }
