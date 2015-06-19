@@ -1,4 +1,4 @@
-# 爆爆王
+# No Bomb No Life
 
 
 ## 專案規格書
